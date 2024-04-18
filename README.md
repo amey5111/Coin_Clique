@@ -4,7 +4,7 @@
 
 <img height="90%" width="90%" src="https://github.com/amey5111/amey5111/blob/main/coinclique%20images/home%20page%20UI%20screen%20shot%20take%201.png?raw=true" alt="HTML"></img>
 
-[Click Here to preview all UI ScreenShots]()
+##### [Click Here to preview all UI ScreenShots]()
 # CoinClique
 
 Expense Managing Web-Application for:

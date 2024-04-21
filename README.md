@@ -2,7 +2,8 @@
 <h1 style="color: violet; font:bold; font-size:45px"><img height="75" width="75" src="https://github.com/amey5111/Coin_Clique/blob/main/public/logo004.png?raw=true" alt="HTML"></img> CoinClique</h1>
 
 
-<img height="90%" width="90%" src="https://github.com/amey5111/amey5111/blob/main/coinclique%20images/home%20page%20UI%20screen%20shot%20take%201.png?raw=true" alt="HTML"></img>
+<img height="100%" width="100%" src="https://s9.gifyu.com/images/SZa2H.gif" alt="web ui"></img>
+<img height="100%" width="100%" src="https://github.com/amey5111/amey5111/blob/main/coinclique%20images/coinclique%20part%202.gif?raw=true" alt="mobile ui"></img>
 
 ### [Click Here to preview all UI ScreenShots]()
 # CoinClique
@@ -37,7 +38,7 @@ Expense Managing Web-Application for:
 - User Authentication through Login and SignUp for Users Data Intigrity and safety
 
 
-### Getting Started
+## Getting Started
 
 First, run the development server:
 

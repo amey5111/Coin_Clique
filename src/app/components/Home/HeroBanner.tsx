@@ -1,8 +1,15 @@
 "use client"
 import Image from 'next/image';
 import React, { useState, useEffect } from 'react';
+import { useRouter } from 'next/navigation';
 
 export default function HeroBanner() {
+    const router = useRouter();
+
+    const handleButtonClick = () =>{
+        router.push("/login");
+    };
+
     const images = [
         "/HeaderBanner/actionable_insights.jpg",
         "/HeaderBanner/heroFirstImage.jpg",
@@ -30,7 +37,7 @@ export default function HeroBanner() {
                     <p className="text-white bg-blue-400 pr-5 w-fit mt-5 mb-3 leading-relaxed text-xl border-4 border-l-8 border-l-yellow-400 pl-2 rounded-xl font-medium">Effortless Expense Tracking</p>
                     <p className="text-white bg-blue-400 pr-5 w-fit mt-5 mb-3 leading-relaxed text-xl border-4 border-l-8 border-l-yellow-400 pl-2 rounded-xl font-medium">Actionable Expense Insights with intuitive graphs </p>
                     <p className="text-white bg-blue-400 pr-5 w-fit mt-5 mb-3 leading-relaxed text-xl border-4 border-l-8 border-l-yellow-400 pl-2 rounded-xl font-medium">Split Bills of any events with Ease</p>
-                    <button className="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded-lg text-center text-xl mt-5 mx-auto w-fit lg:w-1/3">Lets Get Started</button>
+                    <button onClick={handleButtonClick} className="inline-flex text-white bg-yellow-500 border-0 py-2 px-6 focus:outline-none hover:bg-yellow-600 rounded-lg text-center text-xl mt-5 mx-auto w-fit lg:w-1/3">Lets Get Started</button>
                 </div>
                 <div className="lg:max-w-lg lg:w-full md:w-1/2 w-0/12 relative">
                     <div className="w-full h-full perspective">

@@ -2,7 +2,7 @@ import React from 'react'
 
 export default function Loader() {
   return (
-    <div className="w-full gap-x-2 flex justify-center items-center h-1/2">
+    <div className="w-full gap-x-2 flex justify-center items-center h-full my-10">
     <div
       className="w-5 bg-[#d991c2] animate-pulse h-5 rounded-full"
     ></div>

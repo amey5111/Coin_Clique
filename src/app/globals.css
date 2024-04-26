@@ -1,3 +1,9 @@
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
+
+
+.table-container {
+    max-width: 100%;
+    overflow-x: auto;
+  }

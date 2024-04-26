@@ -4,7 +4,7 @@ import { FallBackCardProps } from './types';
 
 const FallBackCard: React.FC<FallBackCardProps> = ({ imgSrc, heading, subHeading }) => {
   return (
-    <div className="flex items-center justify-center text-purple-300 p-4 rounded-lg mx-auto text-center">
+    <div className="flex items-center justify-center text-purple-300 p-4 rounded-lg mx-auto text-center h-svh">
       <div>
         <Image className='mx-auto opacity-20' src={imgSrc} alt="" height={200} width={200} />
         <p className="text-lg font-semibold">{heading}</p>

@@ -45,7 +45,7 @@ const ExpenseManager: React.FC = () => {
       <div className="w-full md:w-3/5 px-5">
         {loading ? (
           // Render Loader effect while loading
-          <Loader />
+          <Loader text="Loading your Expenses" />
         ) : (
           // Render ExpenseTable when not loading
           <ExpenseTable expenses={expenses} />

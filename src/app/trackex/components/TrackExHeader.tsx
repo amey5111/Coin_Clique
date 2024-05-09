@@ -1,5 +1,6 @@
 "use client";
 import React, { useState } from 'react';
+import { useRouter } from 'next/navigation';
 import axios from 'axios';
 import { AiOutlineLineChart, AiOutlinePlus, AiOutlineClose, AiOutlineSearch } from 'react-icons/ai';
 import { TbArrowsSort } from "react-icons/tb";
@@ -8,13 +9,16 @@ import { Expense } from '../types/types';
 import SortOptionsDropdown from './SortOptionsDropdown'
 import { ExpenseTableHeaderProps } from '../types/propTypes';
 
-export const TrackExHeader: React.FC<ExpenseTableHeaderProps> = ({ fetchExpenses }) => {
-
+export const TrackExHeader: React.FC<ExpenseTableHeaderProps> = ({ fetchExpenses, expenses }) => {
+    const router = useRouter();
     const [showAddExpenseModal, setShowAddExpenseModal] = useState(false);
     const [showSearchDrawer, setShowSearchDrawer] = useState(false);
     const [selectedOption, setSelectedOption] = useState('');
     const [isSortDrawerOpen, setIsSortDrawerOpen] = useState(false);
 
+    const handleAnalyzeBtnClick = () => {
+        router.push('/analyze');
+    }
     const handleSubmitExpense = async (expense: Expense) => {
         try {
             const response = await axios.post("/api/userExpenses/addExpenses", expense);
@@ -49,12 +53,13 @@ export const TrackExHeader: React.FC<ExpenseTableHeaderProps> = ({ fetchExpenses
     };
 
 
+
     return (
         <>
             <div className='flex flex-row pt-3 flex-wrap'>
                 <h1 className='lg:text-4xl text-2xl font-extrabold font-mono text-purple-500 pl-5 mr-auto'>Your Expenses</h1>
                 <div className='ml-auto flex mt-1 lg:mt-0'>
-                    <button className="bg-pink-500 hover:bg-pink-600 h-full mt-auto text-xs lg:text-lg text-white py-1 px-2 rounded lg:rounded-lg mr-2 flex items-center">
+                    <button className="bg-pink-500 hover:bg-pink-600 h-full mt-auto text-xs lg:text-lg text-white py-1 px-2 rounded lg:rounded-lg mr-2 flex items-center" onClick={handleAnalyzeBtnClick}>
                         <AiOutlineLineChart className="h-4 w-4 lg:h-6 lg:w-6 mr-1" /> Analyze
                     </button>
                     <div className="relative inline-block text-left">
@@ -66,7 +71,7 @@ export const TrackExHeader: React.FC<ExpenseTableHeaderProps> = ({ fetchExpenses
                             <TbArrowsSort className="h-4 w-4 lg:h-6 lg:w-6 mr-1" />Sort
                         </button>
                         {isSortDrawerOpen && (
-                            <SortOptionsDropdown />
+                            <SortOptionsDropdown expenses={expenses} onOptionClick={toggleDropdown} />
                         )}
                     </div>
                     <button onClick={toggleSearchDrawer} className="bg-blue-500 hover:bg-blue-600 h-full mt-auto text-xs lg:text-lg text-white py-1 px-2 rounded lg:rounded-lg mr-2 flex items-center">

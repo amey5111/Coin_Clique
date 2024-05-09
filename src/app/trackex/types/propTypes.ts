@@ -6,4 +6,10 @@ export interface ExpenseFormProps {
 
 export interface ExpenseTableHeaderProps {
   fetchExpenses: () => Promise<void>;
+  expenses: Expense[]
+}
+
+export interface SortOptionsDropdownProps {
+  expenses: Expense[],
+  onOptionClick: () => void;
 }

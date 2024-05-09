@@ -7,3 +7,12 @@
     max-width: 100%;
     overflow-x: auto;
   }
+
+  /* Add this to your CSS */
+.swiped .px-1.hidden {
+  display: block;
+}
+
+.swiped .px-1:not(.hidden) {
+  display: none;
+}

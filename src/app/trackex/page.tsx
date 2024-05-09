@@ -6,7 +6,6 @@ import axios from "axios";
 import Loader from "../components/Common/Loader/Loader";
 import ExpenseTableHeader from './components/TrackExHeader';
 
-
 const ExpenseManager: React.FC = () => {
   const [expenses, setExpenses] = useState<Expense[]>([]);
   const [loading, setLoading] = useState<boolean>(true);
@@ -29,12 +28,12 @@ const ExpenseManager: React.FC = () => {
 
   return (
     <>
-      <ExpenseTableHeader fetchExpenses={fetchExpenses} />
+      <ExpenseTableHeader fetchExpenses={fetchExpenses} expenses={expenses} />
       <div className="flex flex-col md:flex-row justify-center space-y-4 md:space-x-4 w-full">
         <div className="w-full lg:mx-5">
           {loading ? (
             // Render Loader effect while loading
-            <Loader />
+            <Loader text="Loading Your Expenses" />
           ) : (
             // Render ExpenseTable when not loading
             <ExpenseTable expenses={expenses} />

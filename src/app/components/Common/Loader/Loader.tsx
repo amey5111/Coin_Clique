@@ -1,6 +1,6 @@
 import React from 'react'
 
-export default function Loader() {
+const Loader: React.FC<{text : string}> = ({text}) => {
   return (
     <div className="w-full gap-x-2 flex justify-center items-center h-full my-10">
     <div
@@ -12,7 +12,8 @@ export default function Loader() {
     <div
       className="w-5 h-5 animate-pulse bg-[#6756cc] rounded-full"
     ></div>
-    <div className="animate-pulse text-purple-300 font-bold text-center text-xl rounded-xl">Loading Your Expenses...</div>
+    <div className="animate-pulse text-purple-300 font-bold text-center text-xl rounded-xl">{text}</div>
   </div>
   )
 }
+export default Loader;

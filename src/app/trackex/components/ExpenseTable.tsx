@@ -89,31 +89,31 @@ const ExpenseTable: React.FC<{ expenses: Expense[] }> = ({ expenses }) => {
             <div className="fixed inset-0 flex items-center justify-center bg-gray-800 bg-opacity-50 z-50">
               <div className="bg-white p-6 rounded-lg max-w-lg w-full">
                 <div className="flex justify-between mb-4">
-                <h2 className="text-xl font-bold text-center mb-2 text-blue-500">Preview Expense Details</h2>
+                  <h2 className="text-xl font-bold text-center mb-2 text-blue-500">Preview Expense Details</h2>
                   <button className="p-2 rounded-full bg-gray-200 hover:bg-gray-300" onClick={closePreviewExpenseModal}><AiOutlineClose className="h-6 w-6 text-gray-700" /></button>
                 </div>
                 <div className="bg-white shadow-md rounded px-8 pt-6 pb-8 mb-4">
-    <div className="mb-4">
-        <label className="block text-blue-500 text-sm font-bold mb-2">Date</label>
-        <p className="text-gray-700 text-base">{selectedExpense.date}</p>
-    </div>
-    <div className="mb-4">
-        <label className="block text-blue-500 text-sm font-bold mb-2">Given To</label>
-        <p className="text-gray-700 text-base">{selectedExpense.givenTo}</p>
-    </div>
-    <div className="mb-4">
-        <label className="block text-blue-500 text-sm font-bold mb-2">Amount</label>
-        <p className="text-gray-700 text-base">{selectedExpense.amount}</p>
-    </div>
-    <div className="mb-4">
-        <label className="block text-blue-500 text-sm font-bold mb-2">Tag</label>
-        <p className="text-gray-700 text-base">{selectedExpense.tag}</p>
-    </div>
-    <div className="mb-4">
-        <label className="block text-blue-500 text-sm font-bold mb-2">Note</label>
-        <p className="text-gray-700 text-base">{selectedExpense.remarks}</p>
-    </div>
-</div>
+                  <div className="mb-4">
+                    <label className="block text-blue-500 text-sm font-bold mb-2">Date</label>
+                    <p className="text-gray-700 text-base">{selectedExpense.date}</p>
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-blue-500 text-sm font-bold mb-2">Given To</label>
+                    <p className="text-gray-700 text-base">{selectedExpense.givenTo}</p>
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-blue-500 text-sm font-bold mb-2">Amount</label>
+                    <p className="text-gray-700 text-base">{selectedExpense.amount}</p>
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-blue-500 text-sm font-bold mb-2">Tag</label>
+                    <p className="text-gray-700 text-base">{selectedExpense.tag}</p>
+                  </div>
+                  <div className="mb-4">
+                    <label className="block text-blue-500 text-sm font-bold mb-2">Note</label>
+                    <p className="text-gray-700 text-base">{selectedExpense.remarks}</p>
+                  </div>
+                </div>
 
               </div>
             </div>
